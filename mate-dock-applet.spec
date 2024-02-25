@@ -7,16 +7,17 @@ License:	GPLv3
 Url:		https://github.com/ubuntu-mate/mate-dock-applet/
 Source0:	https://github.com/ubuntu-mate/mate-dock-applet/archive/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires: pkgconfig(python)
-BuildRequires: pkgconfig(glib-2.0)
+BuildRequires:	autoconf-archive
+BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(glib-2.0)
 
-Requires: python
-Requires: mate-panel
-Requires: python%{pyver}dist(pyxdg)
-Requires: python%{pyver}dist(pycairo)
-Requires: python%{pyver}dist(pygobject)
-Requires: python%{pyver}dist(pillow)
-Requires: python%{pyver}dist(python-xlib)
+Requires:	python
+Requires:	mate-panel
+Requires:	python%{pyver}dist(pyxdg)
+Requires:	python%{pyver}dist(pycairo)
+Requires:	python%{pyver}dist(pygobject)
+Requires:	python%{pyver}dist(pillow)
+Requires:	python%{pyver}dist(python-xlib)
 
 BuildArch:	noarch
 
