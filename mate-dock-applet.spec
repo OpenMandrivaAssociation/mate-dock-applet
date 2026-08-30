@@ -1,7 +1,7 @@
 Summary:	An application dock applet for the MATE panel
 Name:		mate-dock-applet
 Version:	21.10.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/Other
 License:	GPLv3
 Url:		https://github.com/ubuntu-mate/mate-dock-applet/
