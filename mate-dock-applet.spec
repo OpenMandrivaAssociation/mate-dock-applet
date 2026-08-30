@@ -7,6 +7,11 @@ License:	GPLv3
 Url:		https://github.com/ubuntu-mate/mate-dock-applet/
 Source0:	https://github.com/ubuntu-mate/mate-dock-applet/archive/%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
+BuildRequires:	autoconf-archive
 BuildRequires:	gettext-devel
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(glib-2.0)
