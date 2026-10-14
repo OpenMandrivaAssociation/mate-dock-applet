@@ -1,7 +1,7 @@
 Summary:	An application dock applet for the MATE panel
 Name:		mate-dock-applet
 Version:	21.10.0
-Release:	2
+Release:	3
 Group:		Graphical desktop/Other
 License:	GPLv3
 Url:		https://github.com/ubuntu-mate/mate-dock-applet/
@@ -13,7 +13,7 @@ BuildRequires:	slibtool
 BuildRequires:	make
 BuildRequires:	autoconf-archive
 BuildRequires:	gettext-devel
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(glib-2.0)
 
 Requires:	mate-panel
@@ -52,6 +52,10 @@ of size and orientation
 sed -i "s|libdir|datadir|g" src/Makefile.am
 
 %build
+# slibtool's AC_PROG_AR runs before the host triplet is known.
+export AR=ar
+export RANLIB=ranlib
+export NM=nm
 autoreconf -fiv
 %configure \
 	--with-gtk3
